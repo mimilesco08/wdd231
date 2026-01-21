@@ -1,0 +1,326 @@
+/* WDD231 - Small Screen Styles (Mobile First) */
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
+    --text-color: #1f2937;
+    --light-bg: #f9fafb;
+    --white: #ffffff;
+    --border-color: #e5e7eb;
+    --completed-color: #10b981;
+    --hover-color: #1d4ed8;
+    --shadow: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.student-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(5px);
+}
+
+.menu-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg) translateY(8px) translateX(-8px);
+}
+
+/* Navigation Styles - Mobile */
+.main-nav {
+    background-color: var(--secondary-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.main-nav.open {
+    max-height: 300px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav li {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: var(--hover-color);
+}
+
+.main-nav a.active {
+    background-color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Card Sections */
+.card-section {
+    background-color: var(--white);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.card-section p {
+    margin-bottom: 1rem;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.filter-btn:hover {
+    background-color: var(--light-bg);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Course Cards */
+.course-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.course-card {
+    background-color: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.course-card.completed {
+    border-color: var(--completed-color);
+    background-color: #f0fdf4;
+}
+
+.course-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.course-card.completed h3 {
+    color: var(--completed-color);
+}
+
+.course-card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.course-card .credits {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.course-card.completed::after {
+    content: '✓ Completed';
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--completed-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Credits Total */
+.credits-total {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: right;
+    margin-top: 1rem;
+}
+
+/* Skills List */
+.skills-list {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.skills-list li {
+    padding: 0.75rem;
+    background-color: var(--light-bg);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--white);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.copyright {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.last-modified {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}

@@ -1,0 +1,178 @@
+/* WDD231 - Larger Screen Styles (Tablet and Desktop) */
+
+@media (min-width: 768px) {
+    
+    /* Header - Desktop Layout */
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    .header-content {
+        gap: 1.5rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .student-name {
+        font-size: 1.5rem;
+    }
+
+    /* Hide Hamburger Menu on Desktop */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Navigation - Horizontal Desktop Layout */
+    .main-nav {
+        max-height: none;
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .main-nav li {
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .main-nav li:last-child {
+        border-right: none;
+    }
+
+    .main-nav a {
+        color: var(--text-color);
+        padding: 1.25rem 2.5rem;
+        position: relative;
+    }
+
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+
+    .main-nav a:hover {
+        background-color: var(--light-bg);
+    }
+
+    .main-nav a:hover::after {
+        width: 100%;
+    }
+
+    .main-nav a.active {
+        background-color: var(--light-bg);
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    .main-nav a.active::after {
+        width: 100%;
+    }
+
+    /* Main Content - Wider Layout */
+    main {
+        padding: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Card Sections - Better Spacing */
+    .card-section {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Filter Buttons - Centered */
+    .filter-buttons {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .filter-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Course Cards - More Columns */
+    .course-cards {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .course-card {
+        padding: 1.5rem;
+    }
+
+    .course-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .course-card p {
+        font-size: 1rem;
+    }
+
+    /* Skills List - Two Column Layout */
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .skills-list li {
+        padding: 1rem;
+    }
+
+    /* Footer - Better Spacing */
+    footer {
+        padding: 2.5rem 2rem;
+    }
+
+    .social-links {
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .copyright {
+        font-size: 1rem;
+    }
+
+    .last-modified {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1024px) {
+    
+    h1 {
+        font-size: 3rem;
+    }
+
+    .course-cards {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
