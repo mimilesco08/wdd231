@@ -1,0 +1,438 @@
+/* Chamber of Commerce - Small Screen Styles (Mobile First) */
+
+:root {
+    /* Primary Colors */
+    --primary-color: #1e3a8a;
+    --primary-light: #3b82f6;
+    --primary-dark: #1e40af;
+    
+    /* Secondary Colors */
+    --secondary-color: #059669;
+    --secondary-light: #10b981;
+    
+    /* Neutral Colors */
+    --white: #ffffff;
+    --light-gray: #f3f4f6;
+    --medium-gray: #6b7280;
+    --dark-gray: #1f2937;
+    --border-color: #e5e7eb;
+    
+    /* Membership Level Colors */
+    --member-color: #6366f1;
+    --silver-color: #94a3b8;
+    --gold-color: #f59e0b;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    /* Typography */
+    --font-headings: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--light-gray);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 1rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chamber-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.chamber-info h1 {
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.chamber-tagline {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(11px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-11px);
+}
+
+/* Navigation - Mobile */
+.main-nav {
+    background-color: var(--primary-dark);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.main-nav.open {
+    max-height: 400px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-nav a.active {
+    background-color: var(--secondary-color);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Directory Header */
+.directory-header {
+    background-color: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.directory-header h2 {
+    font-family: var(--font-headings);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.directory-intro {
+    color: var(--medium-gray);
+    margin-bottom: 1.5rem;
+}
+
+/* View Controls */
+.view-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid var(--primary-color);
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: var(--light-gray);
+    transform: translateY(-2px);
+}
+
+.view-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.view-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Member Directory - Grid Layout */
+.member-directory {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.member-directory.grid-layout {
+    grid-template-columns: 1fr;
+}
+
+/* Member Cards */
+.member-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.member-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.member-content {
+    padding: 1.5rem;
+}
+
+.member-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 0.75rem;
+}
+
+.member-card h3 {
+    font-family: var(--font-headings);
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.membership-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.membership-badge.member {
+    background-color: var(--member-color);
+    color: var(--white);
+}
+
+.membership-badge.silver {
+    background-color: var(--silver-color);
+    color: var(--white);
+}
+
+.membership-badge.gold {
+    background-color: var(--gold-color);
+    color: var(--white);
+}
+
+.member-card p {
+    margin: 0.5rem 0;
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+}
+
+.member-card .industry {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.member-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.member-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.member-links a:hover {
+    color: var(--primary-light);
+}
+
+/* List Layout */
+.member-directory.list-layout {
+    grid-template-columns: 1fr;
+}
+
+.member-directory.list-layout .member-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.member-directory.list-layout .member-card img {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.member-directory.list-layout .member-content {
+    flex: 1;
+}
+
+.member-directory.list-layout .member-card h3 {
+    font-size: 1.1rem;
+}
+
+.member-directory.list-layout .member-card p {
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 1rem 2rem;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-family: var(--font-headings);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+.development-info {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.development-info p {
+    margin: 0.5rem 0;
+}
+
+.copyright {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.developer-name {
+    font-size: 0.95rem;
+}
+
+.course-info {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.last-modified {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 1rem;
+}

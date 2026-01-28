@@ -1,0 +1,199 @@
+/* Chamber of Commerce - Larger Screen Styles (Tablet and Desktop) */
+
+@media (min-width: 768px) {
+    
+    /* Header - Desktop Layout */
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    .chamber-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .chamber-info h1 {
+        font-size: 2rem;
+    }
+
+    .chamber-tagline {
+        font-size: 1rem;
+    }
+
+    /* Hide Hamburger Menu on Desktop */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Navigation - Horizontal Desktop Layout */
+    .main-nav {
+        max-height: none;
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main-nav li {
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .main-nav li:last-child {
+        border-right: none;
+    }
+
+    .main-nav a {
+        color: var(--primary-color);
+        padding: 1.25rem 2rem;
+        position: relative;
+    }
+
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--secondary-color);
+        transition: width 0.3s ease;
+    }
+
+    .main-nav a:hover {
+        background-color: var(--light-gray);
+    }
+
+    .main-nav a:hover::after {
+        width: 100%;
+    }
+
+    .main-nav a.active {
+        background-color: var(--light-gray);
+        color: var(--primary-color);
+    }
+
+    .main-nav a.active::after {
+        width: 100%;
+        background-color: var(--secondary-color);
+    }
+
+    /* Main Content */
+    main {
+        padding: 2.5rem 2rem;
+    }
+
+    /* Directory Header */
+    .directory-header {
+        padding: 2.5rem;
+    }
+
+    .directory-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .directory-intro {
+        font-size: 1.1rem;
+    }
+
+    /* View Controls - Better Spacing */
+    .view-controls {
+        gap: 1rem;
+    }
+
+    .view-btn {
+        padding: 0.875rem 1.5rem;
+    }
+
+    /* Member Directory - Grid Layout for Tablet */
+    .member-directory.grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Member Cards - Adjust for Tablet */
+    .member-card img {
+        height: 220px;
+    }
+
+    /* List Layout - Better spacing */
+    .member-directory.list-layout .member-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Footer - Grid Layout */
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .development-info {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Desktop - Large Screens */
+@media (min-width: 1024px) {
+    
+    /* Directory Header */
+    .directory-header h2 {
+        font-size: 3rem;
+    }
+
+    /* Member Directory - More Columns */
+    .member-directory.grid-layout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Member Cards - Larger Images */
+    .member-card img {
+        height: 240px;
+    }
+
+    .member-content {
+        padding: 2rem;
+    }
+
+    .member-card h3 {
+        font-size: 1.4rem;
+    }
+
+    /* List Layout - Optimized */
+    .member-directory.list-layout .member-card img {
+        width: 250px;
+        height: 200px;
+    }
+
+    .member-directory.list-layout .member-content {
+        padding: 2rem;
+    }
+
+    /* Footer - Three Columns */
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .development-info {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1400px) {
+    
+    /* Member Directory - Four Columns */
+    .member-directory.grid-layout {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .member-card img {
+        height: 260px;
+    }
+}
