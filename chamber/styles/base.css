@@ -1,0 +1,330 @@
+/* Chamber of Commerce - Base Styles (Mobile First) */
+
+:root {
+    --primary: #003366;
+    --secondary: #0066cc;
+    --accent: #ff9900;
+    --light: #f4f4f4;
+    --dark: #333;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+header h1 {
+    font-size: 1.2rem;
+}
+
+#hamburger {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary);
+}
+
+#nav-menu {
+    list-style: none;
+    display: none;
+}
+
+#nav-menu.open {
+    display: block;
+}
+
+#nav-menu li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#nav-menu a {
+    display: block;
+    padding: 1rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+#nav-menu a:hover,
+#nav-menu a.active {
+    background-color: var(--primary);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    background: rgba(0,51,102,0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #cc7700;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Events */
+.event-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--light);
+}
+
+.event-item:last-child {
+    border-bottom: none;
+}
+
+.event-item h4 {
+    color: var(--secondary);
+    margin-bottom: 0.3rem;
+}
+
+.event-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Weather */
+.current-weather {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.temp {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.weather-desc {
+    text-transform: capitalize;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.forecast-day {
+    text-align: center;
+    padding: 1rem;
+    background: var(--light);
+    border-radius: 5px;
+}
+
+.forecast-day .day {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.forecast-day .temp-forecast {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+/* Spotlights */
+#spotlight-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    border: 2px solid var(--light);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.spotlight-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.spotlight-card h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.membership-level {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.gold {
+    background-color: #ffd700;
+    color: var(--dark);
+}
+
+.silver {
+    background-color: #c0c0c0;
+    color: var(--dark);
+}
+
+.spotlight-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-card a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.footer-social a {
+    text-decoration: none;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}

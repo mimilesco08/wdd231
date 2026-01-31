@@ -436,3 +436,314 @@ footer {
     opacity: 0.8;
     margin-top: 1rem;
 }
+
+/* ===== HOME PAGE STYLES ===== */
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    background: rgba(30, 58, 138, 0.85);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.hero-content h2 {
+    font-family: var(--font-headings);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card h2 svg {
+    color: var(--secondary-color);
+}
+
+/* Events Card */
+.event {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.event:last-of-type {
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+.event h3 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.event-date {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.event p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+}
+
+.view-all-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+    color: var(--primary-light);
+}
+
+/* Weather Card */
+.current-weather {
+    margin-bottom: 1.5rem;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: var(--medium-gray);
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.weather-details p {
+    color: var(--medium-gray);
+}
+
+.forecast h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.forecast-day {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+}
+
+.forecast-date {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.forecast-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.forecast-temp {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+/* Spotlights Card */
+.spotlights-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.spotlight-header {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+}
+
+.spotlight-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.spotlight-header .membership-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.spotlight-content {
+    padding: 1.5rem;
+}
+
+.spotlight-content h3 {
+    font-family: var(--font-headings);
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-industry {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.spotlight-description {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.spotlight-contact {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.spotlight-contact p {
+    margin: 0.5rem 0;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+.spotlight-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.spotlight-link:hover {
+    color: var(--primary-light);
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--medium-gray);
+    font-style: italic;
+}
