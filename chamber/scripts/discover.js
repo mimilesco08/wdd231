@@ -1,4 +1,4 @@
-// Directory/Discovery Page JavaScript
+// Discover Page JavaScript - Module
 import { attractions } from '../data/attractions.mjs';
 
 // Display attractions on page load
@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Display attraction cards
 function displayAttractions() {
     const grid = document.getElementById('attractions-grid');
-    
-    if (!grid) return;
     
     attractions.forEach(attraction => {
         const card = document.createElement('article');
@@ -41,8 +39,6 @@ function displayVisitMessage() {
     const messageDiv = document.getElementById('visit-message');
     const messageText = document.getElementById('message-text');
     const closeBtn = document.getElementById('close-message');
-    
-    if (!messageDiv || !messageText || !closeBtn) return;
     
     // Get last visit from localStorage
     const lastVisit = localStorage.getItem('lastVisit');
