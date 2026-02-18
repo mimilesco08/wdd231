@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Registration confirmation for your basketball game.">
+  <meta name="author" content="Basketball Community">
+  
+  <title>Registration Confirmed - Good Guys Basketball</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏀</text></svg>">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🏀</span>
+        <span class="logo-text"> Carmona Hoop City</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="join.html">Join Game</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding-top: 3rem; text-align: center;">
+      <div style="font-size: 5rem; margin-bottom: 1rem;">✅</div>
+      <h1>Registration Confirmed!</h1>
+      <p class="section-subtitle" style="margin-bottom: 3rem;">You're all set! We'll see you on the court.</p>
+
+      <div style="background: var(--court-navy); padding: 2rem; border-radius: 4px; max-width: 600px; margin: 0 auto 2rem; text-align: left; border: 2px solid var(--court-orange);">
+        <h2 style="color: var(--court-orange); margin-bottom: 1.5rem; text-align: center;">Your Registration Details</h2>
+        <div id="confirmation-details"></div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <a href="index.html" class="btn">Return Home</a>
+        <a href="players.html" class="btn btn-secondary" style="margin-left: 1rem;">Browse Players</a>
+      </div>
+
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--court-blue); border-radius: 4px; max-width: 700px; margin-left: auto; margin-right: auto;">
+        <h3 style="color: var(--line-white); margin-bottom: 1rem;">What's Next?</h3>
+        <ul style="text-align: left; color: var(--concrete-gray); line-height: 2;">
+          <li>Check your email for a confirmation message with game details</li>
+          <li>Join our community chat to connect with other players</li>
+          <li>Arrive 10 minutes early to warm up</li>
+          <li>Bring water, proper shoes, and a positive attitude!</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="players.html">Players</a></li>
+        <li><a href="join.html">Join Game</a></li>
+        <li><a href="attributions.html">Attributions</a></li>
+        <li><a href="#" id="video-link">Video Demo</a></li>
+      </ul>
+      <p class="copyright">&copy; Carmona Hoop City Basketball Community. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/confirmation.js" type="module"></script>
+</body>
+</html>

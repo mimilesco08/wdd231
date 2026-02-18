@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Join our local basketball community. Connect with players, join pickup games, and be part of the action.">
+  <meta name="author" content="Basketball Community">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Local Basketball Community - Connect & Play">
+  <meta property="og:description" content="Join our local basketball community. Connect with players, join pickup games, and be part of the action.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+  
+  <title>Home - Local Basketball Community</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏀</text></svg>">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🏀</span>
+        <span class="logo-text">Carmona Hoop City</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="join.html">Join Game</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-tagline">Good Guys Basketball</p>
+        <h1>Where Ballers Unite</h1>
+        <p class="hero-description">Connect with passionate basketball players in your area. Join pickup games, build your network, and elevate your game.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="players.html" class="btn">Browse Players</a>
+          <a href="join.html" class="btn btn-secondary">Join a Game</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured-players">
+      <div class="section-header">
+        <h2>Featured Players</h2>
+        <p class="section-subtitle">Meet some of our most active community members who bring the energy every game</p>
+      </div>
+      <div class="players-grid" id="featured-players-grid">
+        <div class="loading">Loading players...</div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="players.html" class="btn">View All Players</a>
+      </div>
+    </section>
+
+    <section id="stats">
+      <div class="section-header">
+        <h2>Community Stats</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+        <div>
+          <h3 style="font-size: 3rem; color: var(--court-orange);" id="total-players">0</h3>
+          <p style="text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em;">Active Players</p>
+        </div>
+        <div>
+          <h3 style="font-size: 3rem; color: var(--accent-yellow);" id="games-this-week">12</h3>
+          <p style="text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em;">Games This Week</p>
+        </div>
+        <div>
+          <h3 style="font-size: 3rem; color: var(--line-white);">5</h3>
+          <p style="text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em;">Locations</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div style="background: linear-gradient(135deg, var(--court-orange), var(--accent-yellow)); padding: 3rem 2rem; border-radius: 4px; text-align: center;">
+        <h2 style="color: var(--court-dark); margin-bottom: 1rem;">Ready to Ball?</h2>
+        <p style="color: var(--court-dark); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Join our community today and never miss another game. Connect with players at your skill level and find games near you.</p>
+        <a href="join.html" class="btn" style="background: var(--court-dark); border-color: var(--court-dark); color: var(--line-white);">Join Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="players.html">Players</a></li>
+        <li><a href="join.html">Join Game</a></li>
+        <li><a href="attributions.html">Attributions</a></li>
+        <li><a href="#" id="video-link">Video Demo</a></li>
+      </ul>Carmona Hoop City Basketball Community. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--court-blue);">
+        WDD231 Final Project| 
+        Last Updated: <span id="last-modified"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Join a pickup basketball game in your area. Register for upcoming games and connect with local players.">
+  <meta name="author" content="Basketball Community">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Join a Game - Local Basketball Community">
+  <meta property="og:description" content="Register for upcoming pickup basketball games in your area.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+  
+  <title>Join a Game - Good Guys Basketball</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏀</text></svg>">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🏀</span>
+        <span class="logo-text"> Carmona Hoop City</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="join.html" class="active">Join Game</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding-top: 3rem;">
+      <div class="section-header">
+        <h1>Join a Pickup Game</h1>
+        <p class="section-subtitle">Register for an upcoming game and let's hoop! Fill out the form below to secure your spot.</p>
+      </div>
+
+      <form id="game-registration-form" action="confirmation.html" method="get">
+        <div class="form-group">
+          <label for="full-name">Full Name *</label>
+          <input type="text" id="full-name" name="fullName" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567" pattern="[\(\)\d\s\-\+]+">
+        </div>
+
+        <div class="form-group">
+          <label for="position">Preferred Position *</label>
+          <select id="position" name="position" required>
+            <option value="">Select a position</option>
+            <option value="Point Guard">Point Guard</option>
+            <option value="Shooting Guard">Shooting Guard</option>
+            <option value="Small Forward">Small Forward</option>
+            <option value="Power Forward">Power Forward</option>
+            <option value="Center">Center</option>
+            <option value="Any">Any Position</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="skill-level">Skill Level *</label>
+          <select id="skill-level" name="skillLevel" required>
+            <option value="">Select skill level</option>
+            <option value="Beginner">Beginner - Just starting out</option>
+            <option value="Intermediate">Intermediate - Regular player</option>
+            <option value="Advanced">Advanced - Experienced competitor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="game-date">Preferred Game Date *</label>
+          <input type="date" id="game-date" name="gameDate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="game-time">Preferred Time *</label>
+          <select id="game-time" name="gameTime" required>
+            <option value="">Select a time</option>
+            <option value="Morning">Morning (8am - 12pm)</option>
+            <option value="Afternoon">Afternoon (12pm - 5pm)</option>
+            <option value="Evening">Evening (5pm - 9pm)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Preferred Location *</label>
+          <select id="location" name="location" required>
+            <option value="">Select a location</option>
+            <option value="Downtown Court">Downtown Court - 123 Main St</option>
+            <option value="Riverside Park">Riverside Park - 456 River Rd</option>
+            <option value="Community Center">Community Center - 789 Oak Ave</option>
+            <option value="Westside Gym">Westside Gym - 321 West Blvd</option>
+            <option value="College Campus">College Campus - University Dr</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="years-playing">Years Playing Basketball</label>
+          <input type="number" id="years-playing" name="yearsPlaying" min="0" max="50" placeholder="0">
+        </div>
+
+        <div class="form-group">
+          <label for="additional-info">Additional Information</label>
+          <textarea id="additional-info" name="additionalInfo" placeholder="Tell us anything else we should know (injuries, special requests, etc.)"></textarea>
+        </div>
+
+        <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem;">
+          <input type="checkbox" id="email-updates" name="emailUpdates" value="yes" style="width: auto;">
+          <label for="email-updates" style="margin: 0; text-transform: none;">Send me email updates about upcoming games</label>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem; padding: 1rem;">
+          Register for Game 🏀
+        </button>
+      </form>
+
+      <div style="margin-top: 3rem; text-align: center; color: var(--concrete-gray);">
+        <p>Questions? Contact us at <a href="mailto:info@hoopcity.com" style="color: var(--court-orange);">info@hoopcity.com</a></p>
+      </div>
+    </section>
+
+    <section style="margin-top: 4rem;">
+      <div class="section-header">
+        <h2>Upcoming Games</h2>
+        <p class="section-subtitle">Check out what games are already scheduled</p>
+      </div>
+
+      <div style="display: grid; gap: 1.5rem;">
+        <div style="background: var(--court-navy); padding: 1.5rem; border-radius: 4px; border-left: 4px solid var(--court-orange);">
+          <h3 style="color: var(--line-white); margin-bottom: 0.5rem;">Saturday Morning Run</h3>
+          <p style="color: var(--concrete-gray); margin-bottom: 0.5rem;">📅 This Saturday, 9:00 AM - 12:00 PM</p>
+          <p style="color: var(--concrete-gray); margin-bottom: 0.5rem;">📍 Downtown Court - 123 Main St</p>
+          <p style="color: var(--concrete-gray); margin-bottom: 1rem;">🎯 Skill Level: Intermediate to Advanced</p>
+          <p style="color: var(--accent-yellow); font-weight: 700;">8/10 spots filled</p>
+        </div>
+
+        <div style="background: var(--court-navy); padding: 1.5rem; border-radius: 4px; border-left: 4px solid var(--accent-yellow);">
+          <h3 style="color: var(--line-white); margin-bottom: 0.5rem;">Beginner Friendly Session</h3>
+          <p style="color: var(--concrete-gray); margin-bottom: 0.5rem;">📅 Sunday Afternoon, 2:00 PM - 4:00 PM</p>
+          <p style="color: var(--concrete-gray); margin-bottom: 0.5rem;">📍 Community Center - 789 Oak Ave</p>
+          <p style="color: var(--concrete-gray); margin-bottom: 1rem;">🎯 Skill Level: Beginner to Intermediate</p>
+          <p style="color: var(--accent-yellow); font-weight: 700;">5/12 spots filled</p>
+        </div>
+
+        <div style="background: var(--court-navy); padding: 1.5rem; border-radius: 4px; border-left: 4px solid var(--line-white);">
+          <h3 style="color: var(--line-white); margin-bottom: 0.5rem;">Weeknight Pickup</h3>
+          <p style="color: var(--concrete-gray); margin-bottom: 0.5rem;">📅 Every Tuesday & Thursday, 6:00 PM - 8:00 PM</p>
+          <p style="color: var(--concrete-gray); margin-bottom: 0.5rem;">📍 Riverside Park - 456 River Rd</p>
+          <p style="color: var(--concrete-gray); margin-bottom: 1rem;">🎯 Skill Level: All Levels Welcome</p>
+          <p style="color: var(--accent-yellow); font-weight: 700;">Ongoing - Drop in anytime!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="players.html">Players</a></li>
+        <li><a href="join.html">Join Game</a></li>
+        <li><a href="attributions.html">Attributions</a></li>
+        <li><a href="#" id="video-link">Video Demo</a></li>
+      </ul>
+      <p class="copyright">&copy; Carmona Hoop City Basketball Community. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--court-blue);">
+        WDD231 Final Project | 
+        Last Updated: <span id="last-modified"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts/join.js" type="module"></script>
+</body>
+</html>

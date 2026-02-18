@@ -1,0 +1,202 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "Marcus Johnson",
+      "position": "Point Guard",
+      "skillLevel": "Advanced",
+      "yearsPlaying": 8,
+      "availability": "Weekday Evenings",
+      "bio": "Facilitator with excellent court vision. Love setting up teammates and running the floor.",
+      "favoriteMove": "Crossover to floater",
+      "photo": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "James Rodriguez",
+      "position": "Shooting Guard",
+      "skillLevel": "Intermediate",
+      "yearsPlaying": 4,
+      "availability": "Weekends",
+      "bio": "Three-point specialist who can stretch the floor. Always working on my defense.",
+      "favoriteMove": "Catch and shoot three",
+      "photo": "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "David Chen",
+      "position": "Small Forward",
+      "skillLevel": "Advanced",
+      "yearsPlaying": 10,
+      "availability": "Flexible",
+      "bio": "All-around player who can do a bit of everything. Team player focused on winning.",
+      "favoriteMove": "Euro step layup",
+      "photo": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "Tyler Anderson",
+      "position": "Power Forward",
+      "skillLevel": "Intermediate",
+      "yearsPlaying": 5,
+      "availability": "Weekend Mornings",
+      "bio": "Physical player who loves rebounding and playing in the post. Bring the energy!",
+      "favoriteMove": "Post fadeaway",
+      "photo": "https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "Kevin Martinez",
+      "position": "Center",
+      "skillLevel": "Advanced",
+      "yearsPlaying": 12,
+      "availability": "Weekday Evenings",
+      "bio": "Rim protector and pick-and-roll specialist. Anchor of the defense.",
+      "favoriteMove": "Drop step hook shot",
+      "photo": "https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 6,
+      "name": "Chris Thompson",
+      "position": "Point Guard",
+      "skillLevel": "Beginner",
+      "yearsPlaying": 2,
+      "availability": "Weekends",
+      "bio": "New to organized basketball but eager to learn. Fast and competitive!",
+      "favoriteMove": "Drive to the basket",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 7,
+      "name": "Brandon Lee",
+      "position": "Shooting Guard",
+      "skillLevel": "Advanced",
+      "yearsPlaying": 9,
+      "availability": "Flexible",
+      "bio": "Lockdown defender who can guard multiple positions. Slash and kick game.",
+      "favoriteMove": "Pull-up jumper",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 8,
+      "name": "Alex Rivera",
+      "position": "Small Forward",
+      "skillLevel": "Intermediate",
+      "yearsPlaying": 6,
+      "availability": "Weekday Evenings",
+      "bio": "Versatile wing who can shoot from outside or attack the rim. Team chemistry matters.",
+      "favoriteMove": "Spin move baseline",
+      "photo": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 9,
+      "name": "Jordan Smith",
+      "position": "Power Forward",
+      "skillLevel": "Advanced",
+      "yearsPlaying": 11,
+      "availability": "Weekend Afternoons",
+      "bio": "Stretch four who can shoot from range. Love battling in the paint.",
+      "favoriteMove": "Corner three",
+      "photo": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 10,
+      "name": "Ryan Williams",
+      "position": "Center",
+      "skillLevel": "Intermediate",
+      "yearsPlaying": 5,
+      "availability": "Weekends",
+      "bio": "Big body presence in the paint. Working on expanding my range.",
+      "favoriteMove": "Power dunk",
+      "photo": "https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 11,
+      "name": "Andrew Jackson",
+      "position": "Point Guard",
+      "skillLevel": "Intermediate",
+      "yearsPlaying": 4,
+      "availability": "Weekday Evenings",
+      "bio": "Pass-first guard who values assists over points. Leadership on the court.",
+      "favoriteMove": "Behind-the-back pass",
+      "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 12,
+      "name": "Michael Brown",
+      "position": "Shooting Guard",
+      "skillLevel": "Beginner",
+      "yearsPlaying": 1,
+      "availability": "Weekend Mornings",
+      "bio": "Just getting into the game. Love the competitive nature and team spirit.",
+      "favoriteMove": "Layup",
+      "photo": "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 13,
+      "name": "Daniel Harris",
+      "position": "Small Forward",
+      "skillLevel": "Beginner",
+      "yearsPlaying": 2,
+      "availability": "Flexible",
+      "bio": "Athletic player still learning the fundamentals. High energy every game.",
+      "favoriteMove": "Fast break dunk",
+      "photo": "https://images.unsplash.com/photo-1542909168-82c3e7fdca44?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 14,
+      "name": "Samuel Davis",
+      "position": "Power Forward",
+      "skillLevel": "Advanced",
+      "yearsPlaying": 7,
+      "availability": "Weekday Evenings",
+      "bio": "Hustle player who dives for every loose ball. Bring the intensity!",
+      "favoriteMove": "Offensive rebound putback",
+      "photo": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 15,
+      "name": "Joshua Wilson",
+      "position": "Center",
+      "skillLevel": "Intermediate",
+      "yearsPlaying": 6,
+      "availability": "Weekend Afternoons",
+      "bio": "Fundamentally sound big man. Great screens and team defense.",
+      "favoriteMove": "Pick and roll",
+      "photo": "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 16,
+      "name": "Anthony Moore",
+      "position": "Point Guard",
+      "skillLevel": "Advanced",
+      "yearsPlaying": 13,
+      "availability": "Flexible",
+      "bio": "Veteran floor general with playoff experience. Mentor younger players.",
+      "favoriteMove": "No-look pass",
+      "photo": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 17,
+      "name": "Steven Taylor",
+      "position": "Shooting Guard",
+      "skillLevel": "Intermediate",
+      "yearsPlaying": 5,
+      "availability": "Weekends",
+      "bio": "Perimeter defender with improving offensive game. Hustle and heart.",
+      "favoriteMove": "Step-back three",
+      "photo": "https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 18,
+      "name": "Eric Garcia",
+      "position": "Small Forward",
+      "skillLevel": "Advanced",
+      "yearsPlaying": 9,
+      "availability": "Weekday Evenings",
+      "bio": "Complete player who impacts winning. IQ and instincts are my strengths.",
+      "favoriteMove": "Mid-range pull-up",
+      "photo": "https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?w=400&h=400&fit=crop"
+    }
+  ]
+}

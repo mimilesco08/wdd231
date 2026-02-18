@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse our community of local basketball players. Filter by position, skill level, and availability to find your perfect teammates.">
+  <meta name="author" content="Basketball Community">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Players Directory - Local Basketball Community">
+  <meta property="og:description" content="Browse our community of local basketball players and find your next teammates.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+  
+  <title>Players Directory - Good Guys Basketball</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏀</text></svg>">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🏀</span>
+        <span class="logo-text"> Carmona Hoop City</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="players.html" class="active">Players</a></li>
+          <li><a href="join.html">Join Game</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding-top: 3rem;">
+      <div class="section-header">
+        <h1>Players Directory</h1>
+        <p class="section-subtitle">Browse our community of local basketball players. Click on any player to view their full profile.</p>
+      </div>
+
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All Players</button>
+        <button class="filter-btn" data-filter="Point Guard">Point Guards</button>
+        <button class="filter-btn" data-filter="Shooting Guard">Shooting Guards</button>
+        <button class="filter-btn" data-filter="Small Forward">Forwards</button>
+        <button class="filter-btn" data-filter="Power Forward">Power Forwards</button>
+        <button class="filter-btn" data-filter="Center">Centers</button>
+      </div>
+
+      <div class="filter-controls">
+        <button class="filter-btn active" data-skill-filter="all">All Levels</button>
+        <button class="filter-btn" data-skill-filter="Beginner">Beginner</button>
+        <button class="filter-btn" data-skill-filter="Intermediate">Intermediate</button>
+        <button class="filter-btn" data-skill-filter="Advanced">Advanced</button>
+      </div>
+
+      <div style="text-align: center; margin: 2rem 0; color: var(--court-orange); font-weight: 700;">
+        Showing <span id="player-count">0</span> players
+      </div>
+
+      <div class="players-grid" id="players-grid">
+        <div class="loading">Loading players...</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Player Modal -->
+  <div class="modal" id="player-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-player-name">Player Name</h2>
+        <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-player-image" class="modal-player-image" src="" alt="" loading="lazy">
+        <div class="modal-detail">
+          <span class="modal-label">Position:</span>
+          <span class="modal-value" id="modal-position"></span>
+        </div>
+        <div class="modal-detail">
+          <span class="modal-label">Skill Level:</span>
+          <span class="modal-value" id="modal-skill"></span>
+        </div>
+        <div class="modal-detail">
+          <span class="modal-label">Years Playing:</span>
+          <span class="modal-value" id="modal-years"></span>
+        </div>
+        <div class="modal-detail">
+          <span class="modal-label">Availability:</span>
+          <span class="modal-value" id="modal-availability"></span>
+        </div>
+        <div class="modal-detail">
+          <span class="modal-label">Favorite Move:</span>
+          <span class="modal-value" id="modal-move"></span>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <span class="modal-label" style="display: block; margin-bottom: 0.5rem;">Bio:</span>
+          <p id="modal-bio" style="color: var(--concrete-gray); line-height: 1.8;"></p>
+        </div>
+        <button class="btn" id="add-favorite" style="width: 100%; margin-top: 2rem;">
+          Add to Favorites ⭐
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="players.html">Players</a></li>
+        <li><a href="join.html">Join Game</a></li>
+        <li><a href="attributions.html">Attributions</a></li>
+        <li><a href="#" id="video-link">Video Demo</a></li>
+      </ul>
+      <p class="copyright">&copy; Carmona Hoop City Basketball Community. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--court-blue);">
+        WDD 231 Final Project | 
+        Last Updated: <span id="last-modified"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts/players.js" type="module"></script>
+</body>
+</html>
